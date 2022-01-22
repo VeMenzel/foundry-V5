@@ -1,19 +1,25 @@
 {
   "Actor": {
-    "types": ["character", "vampire", "ghoul", "mortal", "coterie"],
+    "types": [
+      "character",
+      "vampire",
+      "ghoul",
+      "mortal",
+      "coterie"
+    ],
     "templates": {
       "base": {
         "biography": "",
         "appearance": "",
         "equipment": "",
         "notes": "",
-        "headers":{
-          "concept":"",
-          "chronicle":"",
-          "ambition":"",
-          "desire":"",
-          "touchstones":"",
-          "tenets":""
+        "headers": {
+          "concept": "",
+          "chronicle": "",
+          "ambition": "",
+          "desire": "",
+          "touchstones": "",
+          "tenets": ""
         },
         "exp": {
           "value": 0,
@@ -267,18 +273,140 @@
             "value": 0,
             "powers": [],
             "visible": false
+          },
+          "abombwe": {
+            "name": "Abombwe",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "bardo": {
+            "name": "Bardo",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "daimonion": {
+            "name": "Daimonion",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "fleischformen": {
+            "name": "Fleischformen",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "fliegen": {
+            "name": "Fliegen",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "irrsinn": {
+            "name": "Irrsinn",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "mytherceria": {
+            "name": "Mytherceria",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "ogham": {
+            "name": "Ogham",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "quietus": {
+            "name": "Quietus",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "schattenspiele": {
+            "name": "Schattenspiele",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "schimären": {
+            "name": "Schimären",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "serpentis": {
+            "name": "Serpentis",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "spiritus": {
+            "name": "Spiritus",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "temporis": {
+            "name": "Temporis",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "valeren": {
+            "name": "Valeren",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "koldunische_hexerei": {
+            "name": "Koldunische Hexerei",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "mystik": {
+            "name": "Mystik des Abgrunds",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "nekromantie": {
+            "name": "Nekromantie",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "thaumaturgie": {
+            "name": "Thaumaturgie",
+            "value": 0,
+            "powers": [],
+            "visible": false
+          },
+          "kombi": {
+            "name": "Kombinationsdisziplinen",
+            "value": 0,
+            "powers": [],
+            "visible": false
           }
         }
       }
     },
-   
     "character": {
-      "templates": ["base","disciplines"],
-      "headers":{
-        "predator":"",
-        "sire":"",
-        "generation":"",
-        "bane":""
+      "templates": [
+        "base",
+        "disciplines"
+      ],
+      "headers": {
+        "predator": "",
+        "sire": "",
+        "generation": "",
+        "bane": ""
       },
       "blood": {
         "potency": 0,
@@ -292,12 +420,15 @@
       }
     },
     "vampire": {
-      "templates": ["base","disciplines"],
-      "headers":{
-        "predator":"",
-        "sire":"",
-        "generation":"",
-        "bane":""
+      "templates": [
+        "base",
+        "disciplines"
+      ],
+      "headers": {
+        "predator": "",
+        "sire": "",
+        "generation": "",
+        "bane": ""
       },
       "blood": {
         "potency": 0,
@@ -311,37 +442,52 @@
       }
     },
     "ghoul": {
-      "templates": ["base","disciplines"],
-      "headers":{
-        "domitor":""
+      "templates": [
+        "base",
+        "disciplines"
+      ],
+      "headers": {
+        "domitor": ""
       }
     },
     "mortal": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     },
-    "coterie" : {
+    "coterie": {
       "biography": "",
       "equipment": "",
       "notes": "",
-      "headers":{
+      "headers": {
         "concept": ""
       }
     }
   },
   "Item": {
-    "types": ["feature", "power", "specialty", "boon", "customRoll"],
+    "types": [
+      "feature",
+      "power",
+      "specialty",
+      "boon",
+      "customRoll"
+    ],
     "templates": {
       "base": {
         "description": ""
       }
     },
     "feature": {
-      "templates": ["base"],
-      "featuretype":"merit",
+      "templates": [
+        "base"
+      ],
+      "featuretype": "merit",
       "points": 0
     },
     "power": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "discipline": "rituals",
       "duration": "",
       "dice1": "discipline",
@@ -352,17 +498,23 @@
       "amalgam": false
     },
     "specialty": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "skill": "athletics"
     },
     "boon": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
       "boontype": "Trivial"
     },
     "customRoll": {
-      "templates": ["base"],
-      "dice1" : "",
-      "dice2" : ""
+      "templates": [
+        "base"
+      ],
+      "dice1": "",
+      "dice2": ""
     }
   }
 }

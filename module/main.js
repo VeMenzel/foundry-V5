@@ -65,7 +65,7 @@ Hooks.once('init', async function () {
      * @type {String}
      */
   CONFIG.Combat.initiative = {
-    formula: '1d20'
+    formula: '0 + @abilities.composure.value + @skills.awareness.value'
   }
 
   // Define custom Entity classes
@@ -214,7 +214,27 @@ Hooks.once('init', async function () {
       oblivion: 'VTM5E.Oblivion',
       alchemy: 'VTM5E.ThinBloodAlchemy',
       rituals: 'VTM5E.Rituals',
-      ceremonies: 'VTM5E.Ceremonies'
+      ceremonies: 'VTM5E.Ceremonies',
+      abombwe: 'Abombwe',
+      bardo: 'Bardo',
+      daiomonion: 'Daimonion',
+      fleischformen: 'Fleischformen',
+      fliegen: 'Fliegen',
+      irrsinn: 'Irrsinn',
+      mytherceria: 'Mytherceria',
+      ogham: 'Ogham',
+      quietus: 'Quietus',
+      schattenspiele: 'Schattenspiele',
+      schimären: 'Schimären',
+      serpentis: 'Serpentis',
+      spiritus: 'Spiritus',
+      temporis: 'Temporis',
+      valeren: 'Valeren',
+      koldunische_hexerei: 'Koldunische Hexerei',
+      mystik: 'Mystik des Abgrunds',
+      nekromantie: 'Nekromantie',
+      thaumaturgie: 'Thaumaturgie',
+      kombi: 'Kombinationsdisziplinen'
     }
     if (roll) {
       if (key === 'rituals') {
@@ -361,7 +381,7 @@ Hooks.once('ready', function () {
   migrateWorld()
 })
 
-async function willpowerReroll (roll) {
+async function willpowerReroll(roll) {
   const dice = roll.find('.normal-dice')
   const diceRolls = []
 
@@ -413,7 +433,7 @@ async function willpowerReroll (roll) {
 }
 
 // Handles selecting and de-selecting the die
-function dieSelect () {
+function dieSelect() {
   // If the die isn't already selected and there aren't 3 already selected, add selected to the die
   if (!($(this).hasClass('selected')) && ($('.willpowerReroll .selected').length < 3)) {
     $(this).addClass('selected')
@@ -426,7 +446,7 @@ function dieSelect () {
 // TODO: Make this function duplicate/replace the previous roll with the new results
 // TODO: Make this function able to tick superficial willpower damage
 // For now this works well enough as "roll three new dice"
-function rerollDie (actor) {
+function rerollDie(actor) {
   const diceSelected = $('.willpowerReroll .selected').length
 
   // If there is at least 1 die selected and aren't any more than 3 die selected, reroll the total number of die and generate a new message.
@@ -446,7 +466,7 @@ function rerollDie (actor) {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
-async function createVampireMacro (data, slot) {
+async function createVampireMacro(data, slot) {
   if (data.type !== 'Item') return
   if (!('data' in data)) return ui.notifications.warn('You can only create macro buttons for owned Items')
   const item = data.data
@@ -473,7 +493,7 @@ async function createVampireMacro (data, slot) {
  * @param {string} itemName
  * @return {Promise}
  */
-function rollItemMacro (itemName) {
+function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker()
   let actor
   if (speaker.token) actor = game.actors.tokens[speaker.token]

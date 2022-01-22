@@ -71,7 +71,27 @@ export class GhoulActorSheet extends MortalActorSheet {
       oblivion: [],
       rituals: [],
       ceremonies: [],
-      alchemy: []
+      alchemy: [],
+      kombi: [],
+      thaumaturgie: [],
+      nekromantie: [],
+      mystik: [],
+      koldunische_hexerei: [],
+      valeren: [],
+      temporis: [],
+      spiritus: [],
+      serpentis: [],
+      schimären: [],
+      schattenspiele: [],
+      quietus: [],
+      ogham: [],
+      mytherceria: [],
+      irrsinn: [],
+      fliegen: [],
+      fleischformen: [],
+      daimonion: [],
+      bardo: [],
+      abombwe: []
     }
 
     // Iterate through items, allocating to containers
