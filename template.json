@@ -5,7 +5,8 @@
       "vampire",
       "ghoul",
       "mortal",
-      "coterie"
+      "coterie",
+      "npc"
     ],
     "templates": {
       "base": {
@@ -462,6 +463,9 @@
       "headers": {
         "concept": ""
       }
+    },
+    "npc": {
+      "templates": ["base"]
     }
   },
   "Item": {
