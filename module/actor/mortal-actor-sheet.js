@@ -200,7 +200,7 @@ export class MortalActorSheet extends CoterieActorSheet {
     event.preventDefault()
     const element = event.currentTarget
     const dataset = element.dataset
-    const useHunger = this.hunger && (dataset.useHunger === '1')
+    const useHunger = this.hunger && (dataset.useHunger === '0')
     const increaseHunger = dataset.increaseHunger
     const subtractWillpower = dataset.subtractWillpower
     const numDice = dataset.roll
